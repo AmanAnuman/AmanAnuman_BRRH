@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Christmas & New Year Festival ✨</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="style.css">
+<link rel="shortcut icon" href="img.png" type="image/png">
+</head>
+<body>
+
+<!-- Background Video -->
+<video autoplay muted loop id="bgVideo">
+  <source src="videos/christmas-bg.mp4" type="video/mp4">
+  Your browser does not support HTML5 video.
+</video>
+
+<!-- 🎶 Background Music -->
+<audio id="bgMusic" loop>
+  <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 🎆 Fireworks Sound -->
+<audio id="fireSound">
+  <source src="firework.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 🎄 Lights -->
+<ul class="lights">
+  <li></li><li></li><li></li><li></li><li></li>
+  <li></li><li></li><li></li><li></li><li></li>
+</ul>
+
+<!-- Hero Section -->
+<section class="hero">
+  <!-- Animated Hospital Greeting -->
+  <h1 class="hospital-greeting">
+    Bukoba Referral Regional Hospital (BRRH) WISHES YOU A...
+  </h1>
+
+  <h1 class="glow">🎄 Merry Christmas 🎄</h1>
+  <h2>✨ & Happy New Year 2026 ✨</h2>
+  <p>Season of Love • Hope • New Beginnings • Wishing you good Health, <br>Happiness, and Wellness this festive season!</p>
+  <P></P>
+  <button id="start">🎶 Start Celebration</button>
+
+  <!-- Sparkles -->
+  <div class="sparkles"></div>
+</section>
+
+
+<!-- Countdowns -->
+<section class="countdowns">
+  <h2>⏳ Countdown to Christmas</h2>
+  <div id="christmas"></div>
+
+  <h2>🎆 Countdown to New Year</h2>
+  <div id="newyear"></div>
+</section>
+
+<!-- Christmas Trees -->
+<section class="trees">
+  <div class="tree">🎄</div>
+  <div class="tree">🎄</div>
+  <div class="tree">🎄</div>
+</section>
+
+<!-- History Videos -->
+<section class="videos">
+  <h2>📜 History of Christmas</h2>
+  <div class="video-box">
+    <iframe 
+      src="https://www.youtube.com/embed/8xgSFbfOABg" 
+      title="History of Christmas"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+
+  <h2>🎉 History of New Year</h2>
+  <div class="video-box">
+    <iframe 
+      src="https://www.youtube.com/embed/GsU2z4IGbho" 
+      title="History of New Year"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+      allowfullscreen
+      loading="lazy">
+    </iframe>
+  </div>
+</section>
+
+<!-- Fireworks Canvas -->
+<canvas id="fireworks"></canvas>
+
+<footer>
+  With Love ✨AmanAnuman From Tanzania 🇹🇿 • 2025
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>

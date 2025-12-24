@@ -1,0 +1,456 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle at top, #111, #000);
+  color: #f5d88c;
+  min-height: 100vh;
+  text-align: center;
+}
+
+.reveal {
+  position: fixed;
+  inset: 0;
+  background: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.reveal button {
+  padding: 18px 45px;
+  border: 1px solid gold;
+  background: transparent;
+  color: gold;
+  font-size: 1.2em;
+  cursor: pointer;
+}
+
+.message {
+  padding: 120px 20px;
+  display: none;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+h2 {
+  margin-top: 15px;
+  color: #eee;
+}
+
+p {
+  margin-top: 30px;
+  line-height: 1.8;
+  color: #ddd;
+}
+
+.from {
+  display: block;
+  margin-top: 40px;
+  color: gold;
+  font-style: italic;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background: radial-gradient(circle, #000, #020024);
+  color: gold;
+  text-align: center;
+  overflow-x: hidden;
+}
+
+/* 🎄 Lights */
+.lights {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  background: black;
+  padding: 12px;
+}
+
+.lights li {
+  width: 15px;
+  height: 15px;
+  margin: 6px;
+  border-radius: 50%;
+  animation: blink 1s infinite alternate;
+}
+
+.lights li:nth-child(odd) { background: red; }
+.lights li:nth-child(even) { background: gold; }
+
+@keyframes blink {
+  from { opacity: .3; }
+  to { opacity: 1; }
+}
+
+/* ❄️ Snow */
+.snow::before {
+  content: "❄ ❅ ❆ ❄ ❅ ❆ ❄ ❅ ❆";
+  font-size: 35px;
+  position: fixed;
+  animation: snow 12s linear infinite;
+}
+
+@keyframes snow {
+  from { top: -50px; }
+  to { top: 100vh; }
+}
+
+/* 🌟 Hero */
+.hero {
+  padding: 100px 20px;
+}
+
+.glow {
+  font-size: 3.5em;
+  text-shadow: 0 0 20px gold;
+}
+
+button {
+  padding: 14px 35px;
+  background: gold;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1em;
+}
+
+/* ⏳ Countdown */
+.countdowns div {
+  font-size: 1.5em;
+  margin: 10px;
+}
+
+/* 🎄 Trees */
+.trees {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 5em;
+  animation: sway 3s infinite alternate;
+}
+
+@keyframes sway {
+  from { transform: rotate(-2deg); }
+  to { transform: rotate(2deg); }
+}
+
+/* 🎥 Videos */
+.videos video {
+  width: 80%;
+  max-width: 600px;
+  margin: 20px auto;
+  border: 2px solid gold;
+}
+
+/* 🎆 Fireworks */
+canvas {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+}
+
+footer {
+  padding: 30px;
+  color: #aaa;
+}
+
+.videos {
+  padding: 80px 20px;
+}
+
+.video-box {
+  position: relative;
+  width: 90%;
+  max-width: 800px;
+  margin: 25px auto 60px;
+  aspect-ratio: 16 / 9;
+  border: 2px solid gold;
+  box-shadow: 0 0 25px rgba(255,215,0,0.4);
+}
+
+.video-box iframe {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+#bgVideo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* behind all content */
+  filter: brightness(0.5); /* dim video for text readability */
+}
+
+/* Hero Text should be above video */
+.hero {
+  position: relative;
+  z-index: 1;
+  color: #f5d88c;
+  text-align: center;
+  padding: 100px 20px;
+}
+/* Small devices (phones) */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2em;
+  }
+  .hero h2 {
+    font-size: 1.5em;
+  }
+  .trees {
+    font-size: 3em;
+    gap: 20px;
+  }
+  .countdowns div {
+    font-size: 1.2em;
+  }
+  .video-box {
+    width: 95%;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 480px) {
+  .hero {
+    padding: 60px 10px;
+  }
+  button {
+    padding: 10px 25px;
+    font-size: 1em;
+  }
+}
+/* ✨ New Additions ✨ */
+
+/* Hero Text Animation */
+.hero h1, .hero h2, .hero p {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.hero h1 {
+  animation-delay: 0.3s;
+}
+.hero h2 {
+  animation-delay: 0.6s;
+}
+.hero p {
+  animation-delay: 0.9s;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Button Glow on Hover */
+button:hover {
+  box-shadow: 0 0 25px gold, 0 0 50px rgba(255, 223, 0, 0.6);
+  transform: scale(1.1);
+  transition: all 0.3s ease;
+}
+
+/* Background Video Overlay for Cinematic Look */
+#bgVideo::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+}
+
+/* Soft Snow Particles Across Screen */
+.snow::after {
+  content: "❄ ❅ ❆ ❄ ❅ ❆ ❄ ❅ ❆ ❄ ❅ ❆";
+  font-size: 20px;
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  animation: snow 15s linear infinite;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Section Fade-In (for videos, trees, countdowns) */
+.videos, .trees, .countdowns {
+  opacity: 0;
+  transform: translateY(20px);
+  animation: fadeInUp 1s forwards;
+}
+
+.videos { animation-delay: 1.2s; }
+.trees { animation-delay: 1.5s; }
+.countdowns { animation-delay: 1.8s; }
+
+/* 🎄 Christmas Trees with Rotating Lights */
+
+/* Tree Container */
+.trees {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  font-size: 5em;
+  position: relative;
+}
+
+/* Individual Tree Glow + Sway */
+.tree {
+  position: relative;
+  animation: sway 3s infinite alternate ease-in-out;
+}
+
+/* Tree Lights - rotating circles around the tree */
+.tree::before, .tree::after {
+  content: '';
+  position: absolute;
+  top: 90px; left: 50%;
+  width: 10px;
+  height: 10px;
+  background: red;
+  border-radius: 50%;
+  box-shadow:
+    0 -40px gold,
+    30px -20px lime,
+    -30px -20px cyan,
+    20px -60px magenta,
+    -20px -60px orange;
+  transform-origin: center bottom;
+  animation: rotateLights 4s linear infinite;
+}
+
+/* Optional second layer of lights for more depth */
+.tree::after {
+  width: 8px;
+  height: 8px;
+  box-shadow:
+    10px -30px pink,
+    -10px -50px lightblue,
+    25px -40px yellow,
+    -25px -20px green;
+  animation-duration: 6s;
+}
+
+/* Sway Animation */
+@keyframes sway {
+  from { transform: rotate(-3deg); }
+  to { transform: rotate(3deg); }
+}
+
+/* Rotating Lights Animation */
+@keyframes rotateLights {
+  0% { transform: rotate(0deg) translateY(-10px) rotate(0deg); }
+  100% { transform: rotate(360deg) translateY(-10px) rotate(-360deg); }
+}
+
+/* Optional: Flicker Effect for Lights */
+.tree::before, .tree::after {
+  animation-name: rotateLights, flickerLights;
+  animation-duration: 4s, 1.5s;
+  animation-iteration-count: infinite, infinite;
+}
+
+@keyframes flickerLights {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+/* Small devices */
+@media (max-width: 768px) {
+  .trees {
+    font-size: 3em;
+    gap: 20px;
+  }
+}
+
+/* Hand-Writing Rainbow Text */
+.hospital-greeting {
+  font-family: 'Pacifico', cursive; /* Hand-writing style */
+  font-size: 2em;
+  background: linear-gradient(90deg, #ff0040, #ffb400, #00ff99, #00bfff, #ff00ff);
+  background-size: 400% 100%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbowText 6s linear infinite, writeEffect 4s ease forwards;
+  margin-bottom: 20px;
+  opacity: 0;
+  text-shadow: 0 0 10px rgba(255,255,255,0.3);
+}
+
+/* Rainbow gradient animation */
+@keyframes rainbowText {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+/* Hand-writing fade-in effect */
+@keyframes writeEffect {
+  0% { width: 0; opacity: 0; }
+  100% { width: 100%; opacity: 1; }
+}
+
+/* Sparkles container */
+.sparkles {
+  position: absolute;
+  top: 130PX;
+  left: 50%;
+  width: 900px;
+  height: 100px;
+  pointer-events: none;
+  transform: translateX(-50%);
+  overflow: visible;
+}
+
+.sparkle {
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  background: gold;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: sparkleMove 2s linear infinite;
+}
+
+/* Sparkle Animation */
+@keyframes sparkleMove {
+  0% { transform: translate(0,0) scale(0.5); opacity: 0.8; }
+  50% { transform: translate(calc(-50px + 100px*var(--i)), -50px) scale(1.2); opacity: 1; }
+  100% { transform: translate(calc(-100px + 200px*var(--i)), -100px) scale(0.5); opacity: 0; }
+}
+
+/* Glow shadow for Merry Christmas */
+.glow {
+  font-size: 3.5em;
+  text-shadow: 0 0 10px gold, 0 0 20px gold, 0 0 30px orange;
+}
+
+/* Confetti burst on Start button click */
+.confetti {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background-color: #ff0040;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  pointer-events: none;
+  border-radius: 50%;
+  z-index: 9999;
+}
